@@ -1,0 +1,314 @@
+/*
+CSS 
+web o pagina: Ejercicio Práctico Segundo Trimestre
+autor: Manuel Carrillo
+fecha: Marzo de 2021
+*/
+
+/*Estilo para todos los elementos de la página*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.marco {
+  display: grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 60px 40px auto 50px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.encabezado {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
+  display: flex;
+  padding: 20px 0px 15px 0px;
+  background-color: black;
+  color: white;
+}
+
+/*Estilo de la barra de navegación*/
+nav {
+  width: 70%;
+  height: 100%;
+  overflow: visible;
+  padding-left: 10px;
+}
+
+nav .activo {color: grey;}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 20px 5px 22px 5px;
+}
+
+nav a button {text-decoration: none;}
+
+nav a:hover {
+  color: grey;
+  transition: 0.3s;
+}
+
+/*Estilo del contador*/
+#contador {
+  width: 30%;
+  text-align: right;
+  padding-right: 15px;
+}
+
+/*Estilo de la hamburguesa oculta*/
+.hamburguesa {
+  width: 0;
+  visibility: hidden;
+  text-align: right;
+}
+
+.hamburguesa span:hover {cursor: pointer;}
+
+/*Estilo del menú desplegable oculto*/
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {color: #f1f1f1;}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*Estilo de las migas de pan*/
+.migas {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  padding: 5px;
+  padding-top: 11px;
+  background-color: #f2f2f2;
+  border-bottom: gainsboro 1px solid;
+  padding-left: 15px;
+}
+
+ul.breadcrumb {list-style: none;}
+
+ul.breadcrumb li {display: inline;}
+
+ul.breadcrumb li+li:before {
+  padding: 5px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
+/*Estilo del menu de navegación izquierdo*/
+.lado {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  background-color: #f2f2f2;
+  overflow-y:auto;
+  border-right: gainsboro 1px solid;
+}
+
+.nav_lateral .activo {background-color: gainsboro;}
+
+.nav_lateral a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 12px;
+  color: black;
+  border-bottom: gainsboro 1px solid;
+}
+
+.nav_lateral a:hover {background-color: gainsboro;}
+
+/*Estilo del contenido*/
+.contenido {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  padding: 30px 30px 15px 30px;
+  overflow-y: auto;
+  text-align: center;
+}
+
+section {padding: 15px 25px 0px 25px;}
+
+.contenido h1, h2 {color: royalblue;}
+
+.contenido p {text-align: justify;}
+
+.fila_main {padding-top: 15px;}
+
+.imagen_main {
+  width: 35%;
+  float: left;
+  padding: 25px;
+}
+
+.imagen_main img {width: 100%;}
+
+.texto_main {
+  width: 65%;
+  float: left;
+  padding: 25px;
+}
+
+.fila_main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lista {
+  background-color: #f2f2f2; 
+  padding: 10px; 
+  border: gainsboro 1px solid; 
+  font-size: 15px;
+}
+
+#video {
+  height: 325px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.formas {display: flex;}
+
+.formas_texto {
+  width: 65%; 
+  padding-right: 25px;
+}
+
+.formas_imagen {width: 35%;}
+
+.formas_imagen img {width: 100%;}
+
+.opinion {display: flex;}
+
+.opinion_imagen {width: 40%;}
+
+.opinion_imagen img {width: 100%;}
+
+.opinion_texto {
+  width: 60%; 
+  padding-left: 25px;
+}
+
+/*Estilo del pié de página*/
+.pie {
+  border-top: gainsboro 1px solid;
+  grid-column: 1 / span 2;
+  grid-row: 4 / span 1;
+  display: flex;
+  padding: 5px;
+  background-color: #f2f2f2;
+}
+
+.copyright {
+  width: 75%;
+  padding: 10px;
+}
+
+.copyright a {text-decoration: none;}
+
+.cenec {
+  text-align: right;
+  width: 25%;
+  padding-right: 10px;
+}
+
+/*Estilo de la página por debajo de 650px*/
+@media screen and (max-width: 650px) {
+  nav {
+    visibility: hidden;
+    width: 0%;
+  }
+
+  #contador {width: 90%;}
+
+  .hamburguesa {
+    width: 10%;
+    visibility: visible;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .lado {display: none;}
+
+  .contenido {grid-column: 1 / span 2;}
+
+  section p {text-align: justify;}
+
+  .columna_main {width: 100%;}
+
+  .imagen_main {width: 100%;}
+
+  .texto_main {width: 100%;}
+
+  #video {
+    width: 100%;
+    margin-left: 0%;
+    height: 250px;
+  }
+
+  .formas {display: block;}
+
+  .formas_texto {
+    width: 100%;
+    padding: 0%;
+  }
+  
+  .formas_imagen {width: 100%;}
+  
+  .opinion {display: block;}
+
+  .opinion_imagen {width: 100%;}
+  
+  .opinion_texto {
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+  }
+
+}

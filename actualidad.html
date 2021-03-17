@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Ejercicio Práctico Segundo Trimestre
+autor: Manuel Carrillo
+fecha: Marzo 2021
+-->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Trabajo práctico segundo trimestre">
+	<meta name="author" content="Manuel Carrillo">
+
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>Actualidad</title>
+
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+	<!-- una hoja de estilos personalizada-->
+	<link href="00-modelo.css" rel="stylesheet" />
+
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<div class="marco">
+		<!--Header y Nav-->
+		<header class="encabezado">
+			<!--Despliega el menú oculto, solo visible por debajo de los 650px-->
+			<div class="hamburguesa">
+				<span onclick="openNav()">&#9776; </span>
+			</div>
+			<!--Barra de navegación, solo visible por encima de los 650px-->
+			<nav>
+				<a href="index.html">Inicio</a>
+				<a class="activo" href="actualidad.html">Actualidad</a>
+				<a href="#">Blog</a>
+				<a href="#">Tendencias</a>
+				<a href="#">Contactar</a>
+			</nav>
+			<div id="contador">
+			</div>
+		</header>
+
+		<!--Migas de pan-->
+		<div class="migas">
+			<ul class="breadcrumb">
+				<li><a href="index.html">Inicio</a></li>
+				<li id="prueba"></li>
+			</ul>
+		</div>
+
+		<!--Barra de navegación lateral-->
+		<aside class="lado">
+			<div class="nav_lateral">
+				<a href="index.html">Inicio</a>
+				<a class="activo" href="actualidad.html">Actualidad</a>
+				<a href="#">Blog</a>
+				<a href="#">Tendencias</a>
+				<a href="#">Contactar</a>
+			</div>
+		</aside>
+
+		<!--Main-->
+		<main class="contenido">
+			<h1>"Píxeles espías" y la vulneración de la privacidad</h1>
+			<section>
+				<article>
+					<br>
+					<p>Dos tercios de los correos electrónicos enviados por las grandes empresas a las cuentas
+						personales de
+						sus usuarios contenían
+						un "píxel espía", incluso después de excluirlos como correo basura, según un estudio de Hey.</p>
+					<br>
+					<p>Su uso está muy extendido entre las grandes empresas con el objetivo de recabar información sobre
+						el
+						usuario con el objetivo de realizar un seguimiento de actividad y poder así mejorar su oferta de
+						productos y análisis web. Sin embargo, mediante la inclusión de Javascript, el remitente puede
+						recopilar información sensible del usuario o su equipo, suponiendo una potencial vulneración de
+						la
+						privacidad.</p>
+					<br>
+					<h2>¿Que es un píxel de seguimiento o "tracking pixel"?</h2>
+					<br>
+					<p>Un píxel de seguimiento es una imagen de 1x1 pixel de tamaño, generalmente transparente en
+						formato
+						GIF, insertado en una pagina web o correo electrónico cuyo objetivo es monitorizar acciones
+						específicas de los usuarios u obtener información estadística.</p>
+					<br>
+					<p>Los píxeles de seguimiento suelen presentarse de la siguiente manera dentro del código fuente:
+					</p>
+					<br>
+					<div class="lista">
+						<p>
+							&lt;img src=“Tracking Pixel URL” style=“position:absolute; visibility:hidden”&gt;
+							<br><br>
+							&lt;img src=“Tracking Pixel URL” style=“display:none”&gt;
+							<br><br>
+							&lt;img src=“Tracking Pixel URL” width=“0” height=“0”&gt;
+						</p>
+					</div>
+					<br>
+					<p>Cuando el usuario accede al contenido del mensaje, el navegador abrirá el gráfico invisible,
+						quedando
+						registrado en los archivos log del servidor.</p>
+					<br>
+					<div id="video">
+						<iframe width="100%" height="100%"
+							src="https://www.youtube.com/embed/rrAjCHm7qRU?controls=0&cc_load_policy=1" frameborder="0">
+						</iframe>
+					</div>
+					<br>
+					<p>A través del uso de estos píxeles, y mediante la utilización de JavaScript, las empresas pueden
+						pueden obtener muchos otros datos de los usuarios, por ejemplo:</p>
+					<br>
+					<div class="lista">
+						<p>- Operador utilizado (información sobre el dispositivo)</p><br>
+						<p>- Navegador utilizado</p><br>
+						<p>- Resolución de la pantalla del usuario</p><br>
+						<p>- Hora en la que leyó/visitó el email/sitio web</p><br>
+						<p>- Acciones en el sitio web durante la sesión (múltiples píxeles de seguimiento)</p><br>
+						<p>- Dirección IP (información del Proveedor del Servicio de Internet y localización)</p>
+					</div>
+					<br>
+					<p>La principal ventaja para las empresas derivada del uso de estos píxeles es que pueden utilizar
+						la
+						información obtenida para mejorar la oferta de productos, adaptándola al gusto del usuario.
+						Estos píxeles son más efectivos en este sentido que el caché de los navegadores ya que pueden
+						analizar el
+						acceso a páginas específicas. Los píxeles de seguimiento también son útiles para el análisis de
+						las
+						newsletter, al obtener datos
+						específicos sobre el ratio de visualización de emails o artículos.</p>
+					<br>
+
+					<div class="formas">
+						<div class="formas_texto">
+							<h2>Formas de bloquearlos</h2>
+							<br>
+							<p>Algunas de las medidas para evitar estos píxeles son:</p><br>
+							<p>- Configurar los ajustes del navegador y del correo electrónico para restringir gráficos
+								externos.</p><br>
+							<p>- Usar extensiones para el navegador que visualicen y limiten ciertas imágenes.</p><br>
+							<p>- Navegar en modo anónimo o utilizar servidores proxy para prevenir la descarga
+								automática de
+								píxeles.</p><br>
+							<p>- Desactivar los scripts del navegador.</p><br>
+						</div>
+						<div class="formas_imagen">
+							<img src="security-265130_640.jpg" alt="Seguridad Informática">
+						</div>
+					</div>
+					<br>
+				</article>
+
+				<!--Opinión personal-->
+				<article>
+					<h2>Crítica</h2>
+					<br>
+					<p>Las principales críticas sobre el uso de estos píxeles de seguimiento y técnicas similares se
+						centran
+						en el consentimiento del usuario y el interés legítimo de la empresa.</p><br>
+					<p>Existe el debate sobre si la utilización de píxeles espías supone una vulneración manifiesta de
+						la
+						privacidad del usuario, ya que, en la gran mayoría de ocasiones, este ignora por completo la
+						presencia de dichos píxeles en correos electrónicos y páginas webs que visita a diario. En este
+						sentido, el <a
+							href="https://noticias.juridicas.com/base_datos/Laboral/632849-lo-3-2018-de-5-dic-proteccion-de-datos-personales-y-garantia-de-los-derechos.html#a6"
+							target="blank">artículo
+							6 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos</a>,
+						establece, de conformidad con lo dispuesto en el artículo 4.11 del Reglamento (UE) 2016/679, que
+						"se
+						entiende por consentimiento del afectado toda manifestación de
+						voluntad libre, específica, informada e inequívoca por la que este acepta, ya sea mediante una
+						declaración o una clara acción afirmativa, el tratamiento de datos personales que le conciernen.
+					</p>
+					<br>
+					<p>Así mismo, en el punto 2 de dicho artículo, establece la ley que "Cuando se pretenda fundar el
+						tratamiento de los datos en el consentimiento del afectado para una pluralidad de finalidades
+						será
+						preciso que conste de manera específica e inequívoca que dicho consentimiento se otorga para
+						todas
+						ellas".</p><br>
+
+					<div class="opinion">
+						<div class="opinion_imagen">
+							<img src="hacking-3112539_640.png" alt="Hacking">
+						</div>
+						<div class="opinion_texto">
+							<p>En este caso, las empresas utilizan lo que se conoce como "contrato de adhesión", donde
+								las
+								condiciones son redactadas por una de las partes, sin que medie negociación, y el
+								usuario
+								solo
+								tiene
+								la
+								posibilidad de aceptar o no el contrato en su totalidad. Sin embargo, aunque las
+								empresas
+								suelen
+								incluir la utilización de píxeles de seguimiento en sus condiciones, el no especificar
+								su
+								uso o
+								el
+								tipo de información que recaban sí puede suponer una clara vulneración de la privacidad
+								del
+								usuario
+								y la buena fé contractual.</p>
+							<br>
+							<p>Por tanto, en el caso de que el usuario esté correctamente informado y la entidad que
+								hace el
+								seguimiento de los datos puede justificar su interés legítimo en recurrir a estos, por
+								ejemplo,
+								verificando que se haya abierto un correo electrónico, puede entenderse que hace un uso
+								legítimo y
+								acorde al servicio prestado, sin embargo, si la utilización de este tipo de técnicas se
+								amplia a
+								otras finalidades no especificadas o no justificadas por el interés legítimo de la
+								empresa
+								para la
+								prestación de
+								servicios, por ejemplo, la utilización para campañas de marketing personalizadas, se
+								vulneraría
+								expresamente el consentimiento dado por el usuario.</p>
+							<br>
+						</div>
+					</div>
+					<br>
+					<p>Me gustaría, además, dar mi opinión sobre este tema desde un punto moral o menos práctico, de
+						forma
+						breve, aunque sea
+						ya algo en desuso.</p>
+					<br>
+					<p>Considero que existen dos vertientes o ámbitos de desarrollo humano claramente diferenciados, Uno
+						es
+						el desarrollo externo, las herramientas o medios tecnológicos que nos permiten adecuar el medio
+						a
+						nuestras necesidades, el otro es el desarrollo interno, la capacidad individual de hacer uso de
+						dichos medios. El primero se hereda de forma colectiva, mientras que el segundo empieza de cero
+						en
+						cada generación.</p>
+					<br>
+					<p>El uso de prácticas potencialmente fraudulentas como las contempladas en este artículo ponen de
+						manifiesto el desequilibrio que existe entre uno y otro ámbito de desarrollo humano. Digamos que
+						el
+						primero se desarrolla de forma exponencial mientras que el segundo parece claramente estancado.
+					</p>
+					<br>
+					<p>¿Supone esto que habría que frenar o incluso rechazar el desarrollo tecnológico?, en absoluto, ya
+						que
+						puede ser más beneficioso que perjudicial. Sin embargo, descuidar o despreciar el aprendizaje de
+						las
+						capacidades de uso de dichos medios hará, sin ninguna duda, que nos encontremos cada vez más
+						cerca
+						de, como decía Thoreau, "convertirnos en herramientas de nuestras herramientas".</p>
+				</article>
+			</section>
+		</main>
+
+		<!--Footer-->
+		<footer class="pie">
+			<div class="copyright">
+				&copy; 2021
+				<a href="mailto:mcarrillo@inventado.com">Manuel Carrillo</a>
+			</div>
+			<div class="cenec">
+				<a href="https://www.cenecmalaga.es/" target="blank"><img src="índice.png" alt="CENEC"></a>
+			</div>
+		</footer>
+	</div>
+
+	<!--Menú oculto desplegable-->
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="index.html">INICIO</a>
+			<a href="actualidad.html">ACTUALIDAD</a>
+			<a href="#">BLOG</a>
+			<a href="#">TENDENCIAS</a>
+			<a href="#">CONTACTAR</a>
+		</div>
+	</div>
+
+</body>
+<!-- scripts externos personalizados Javascript o JQuery -->
+<script src="00-modelo.js"></script>
+
+</html>
